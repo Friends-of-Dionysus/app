@@ -9,3 +9,15 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+model Raffle {
+  id            Int       @default(autoincrement()) @id
+  solAddress       String?   @unique
+  twitterHandle String?   @unique
+  email String  
+  contactPermission Boolean @default(true) 
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  @@map(name: "raffle")
+}
