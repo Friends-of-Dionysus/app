@@ -125,7 +125,7 @@ export default function WhitelistHero() {
                             <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
                                 <div>
                                     <a
-                                        href="https://friendsofdionysus.com" target="_blank"
+                                        href="https://friendsofdionysus.com" target="_blank" rel="noreferrer" 
                                         className="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                                     >
                                         <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-fod-red rounded-full">
@@ -145,7 +145,7 @@ export default function WhitelistHero() {
                                     <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
                                         <div className="flex flex-wrap items-start justify-between">
                                             <div className="flex justify-center px-1">
-                                                <a href="https://craft-clarity.com" target="_blank"><img
+                                                <a href="https://craft-clarity.com" target="_blank" rel="noreferrer" ><img
                                                     className="h-6 sm:h-8 opacity-80"
                                                     src="/images/cc_logo.svg"
                                                     alt="Tuple"
@@ -210,7 +210,7 @@ export default function WhitelistHero() {
                                                 <div>
                                                     <label className="inline-flex items-left mt-3 max-w-lg">
                                                         <input type="checkbox" className="form-checkbox h-5 w-5 bg-gray-600 text-gray-600" onChange={() => handleCheckbox()} />
-                                                        <span className="ml-4 -mt-1 text-left text-white text-xs leading-5 text-white">By clicking on the button below, you acknowledge you have read and agreed to our <a className="text-fod-yellow underline" href="https://friendsofdionysus.com/dataprivacy" target="_blank">Privacy Policy</a></span>
+                                                        <span className="ml-4 -mt-1 text-left text-white text-xs leading-5 text-white">By clicking on the button below, you acknowledge you have read and agreed to our <a className="text-fod-yellow underline" href="https://friendsofdionysus.com/dataprivacy" rel="noreferrer" target="_blank">Privacy Policy</a></span>
                                                     </label>
 
 
@@ -237,7 +237,7 @@ export default function WhitelistHero() {
                                     </div>
                                     <div className="px-4 py-6 bg-fod-dark-bg  text-center  border-t-2 border-gray-600 sm:px-10">
                                         <p className="text-xs text-gray-400">
-                                            If you encounter any issue ping us on <a href="https://discord.com/invite/kY3Fg8DDkk" target="_blank" className="underline text-fod-yellow">Discord</a>.
+                                            If you encounter any issue ping us on <a href="https://discord.com/invite/kY3Fg8DDkk" target="_blank" rel="noreferrer" className="underline text-fod-yellow">Discord</a>.
                                         </p>
                                     </div>
 
