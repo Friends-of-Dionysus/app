@@ -218,7 +218,7 @@ export default function WhitelistHero() {
                                                     </a>
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-sm tracking-wider text-white pb-4">3. Provide addtional information.</h3>
+                                                    <h3 className="text-sm tracking-wider text-white pb-4">3. Provide additional information.</h3>
                                                     <label htmlFor="name" className="sr-only">
                                                         Twitter Handle
                                                     </label>
