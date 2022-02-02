@@ -12,7 +12,7 @@ module.exports = {
         'fod-pink': '#ff93d5',
         'fod-dark-bg': '#261c20',
         'fod-button-blue': '#6372ec',
-        'fod-red': '#8F3863'
+        'fod-red': '#8F3863',
       }
     },
     fontFamily: {
