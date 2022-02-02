@@ -37,8 +37,8 @@ function MyApp({ Component, pageProps }) {
             <title>Friends Of Dionysus | The NFT-funded winery</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-            <meta property="og:title" content="Friends Of Dionysus | The NFT-funded winery" />
-            <meta property="og:site_name" content="Our vision is inspired by a simple desire: we want to create a sincere and sustainable community by building a real-life winery in Italy." />
+            <meta property="og:title" content="Friends Of Dionysus" />
+            <meta property="og:site_name" content="The NFT-funded winery" />
             <meta property="og:url" content="https://get.friendsofdionysus.com" />
             <meta
               property="og:description"
