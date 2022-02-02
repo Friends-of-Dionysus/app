@@ -47,14 +47,14 @@ function MyApp({ Component, pageProps }) {
             <meta property="og:type" content="website" />
             <meta
               property="og:image"
-              content="/images/chaos.png"
+              content="https://friendsofdionysus.com/wp-content/uploads/2022/02/Preview-3.png"
             />
 
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@fofdionysus" />
             <meta name="twitter:title" content="Friends Of Dionysus | The NFT-funded winery" />
             <meta name="twitter:description" content="Our vision is inspired by a simple desire: we want to create a sincere and sustainable community by building a real-life winery in Italy." />
-            <meta name="twitter:image" content="https://www.patchwork-kingdoms.com/images/cotton_candy.png"></meta>
+            <meta name="twitter:image" content="https://friendsofdionysus.com/wp-content/uploads/2022/02/Preview-3.png"></meta>
 
             <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
             <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
