@@ -175,7 +175,7 @@ export default function WhitelistHero() {
                                                     <WalletMultiButton />
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-sm tracking-wider text-white pb-4">2. Retweet this <a className="underline text-fod-yellow" href="https://twitter.com/fofdionysus/status/1485697512992395269?s=20">tweet</a> to double your chances.</h3>
+                                                    <h3 className="text-sm tracking-wider text-white pb-4">2. Retweet this <a target="_blank" rel="noreferrer" className="underline text-fod-yellow" href="https://twitter.com/fofdionysus/status/1485697512992395269?s=20">tweet</a> to double your chances.</h3>
                                                 </div>
                                                 <div>
                                                     <h3 className="text-sm tracking-wider text-white pb-4">3. Provide addtional information.</h3>
@@ -200,7 +200,7 @@ export default function WhitelistHero() {
                                                         name="email"
                                                         id="email"
                                                         autoComplete="email"
-                                                        placeholder="Your Email Address"
+                                                        placeholder="(Optional) Email Address"
                                                         onChange={(e) => handleEmail(e)}
                                                         required
                                                         className="bg-fod-dark-bg text-white block w-64 shadow-sm focus:ring-fod-yellow focus:border-fod-yellow sm:text-sm border-gray-500 rounded-md"
