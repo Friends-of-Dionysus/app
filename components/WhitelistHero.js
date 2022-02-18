@@ -1,16 +1,10 @@
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import { WalletDisconnectButton, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { PublicKey } from '@solana/web3.js';
 import { useWallet } from '@solana/wallet-adapter-react';
 
 const navigation = []
-
-const steps = [
-    { id: '2x', name: 'Retweet this tweet to double your chances', href: 'https://twitter.com/fofdionysus/status/1485697512992395269', status: 'current' },
-    { id: '3x (Upcoming)', name: 'Participate in the upcoming FoD meme contest', href: '#', status: 'upcoming' },
-    { id: '4x (Upcoming)', name: 'NFT-holder of a collaboration partner', href: '#', status: 'upcoming' },
-]
 
 export default function WhitelistHero() {
 
@@ -20,9 +14,25 @@ export default function WhitelistHero() {
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(false)
     const [running, setRunning] = useState(false)
+    const [count, setCount] = useState()
 
     const wallet = useWallet();
 
+    useEffect(async () => {
+        if (!count) {
+            const res = await fetch(`/api/getTotalCount`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            let data = await res.json()
+
+            setCount(data.totalCount)
+
+        }
+    }, [])
     const anchorWallet = useMemo(() => {
         if (
             !wallet ||
@@ -114,7 +124,7 @@ export default function WhitelistHero() {
                     <div className="flex items-center flex-1">
                         <div className="flex items-center mx-auto justify-between w-full md:w-auto">
                             <a href="#">
-                                <span className="sr-only">Workflow</span>
+                                <span className="sr-only">Friends of Dionysus</span>
                                 <img
                                     className="h-28 w-auto sm:h-48"
                                     src="/images/logo.png"
@@ -149,48 +159,9 @@ export default function WhitelistHero() {
                                     </p>
                                     <div>
                                         <p className="text-base mt-3 text-gray-200 sm:mt-5 sm:text-base lg:text-base xl:text-base">
-                                            The word raffle speaks for itself. There is an element of luck &amp; randomness to the selection process. However, to reward special engagement and an active contribution to increase FoD&apos;s reach, we came-up with certain multipliers that will boost your chances to land a spot in the pre-sale.
+                                            Every of the  <strong>500 pre-sale slots</strong> allows you to mint <strong>2 NFTs</strong>. <br /> <br /> If 500 slots are exceeded, you can still join and you will be part of our waiting list. <br /> <br />First come, first served!
                                         </p>
 
-                                        <h3 className="text-base mt-3 text-gray-200 sm:mt-5 sm:text-base lg:text-base xl:text-base">The following activities will multiply your chances to hit one of the <strong>750 pre-sale slots</strong>. Every slot can buy <strong>2 NFTs</strong>.</h3>
-                                        <ol role="list" className="space-y-4 md:flex md:space-y-0 md:space-x-8 mt-10">
-                                            {steps.map((step) => (
-                                                <li key={step.name} className="md:flex-1">
-                                                    {step.status === 'complete' ? (
-                                                        <a
-                                                            href={step.href}
-                                                            className="group pl-4 py-2 flex flex-col border-l-4 border-fod-ping hover:border-fod-pink md:pl-0 md:pt-4 md:pb-0 md:border-l-0 md:border-t-4"
-                                                        >
-                                                            <span className="text-xs text-fod-pink font-semibold tracking-wide uppercase group-hover:text-fod-pink">
-                                                                {step.id}
-                                                            </span>
-                                                            <span className="text-sm font-medium">{step.name}</span>
-                                                        </a>
-                                                    ) : step.status === 'current' ? (
-                                                        <a
-                                                            href={step.href}
-                                                            className="pl-4 py-2 flex flex-col border-l-4 border-fod-pink md:pl-0 md:pt-4 md:pb-0 md:border-l-0 md:border-t-4"
-                                                            aria-current="step"
-                                                            target="_blank"
-                                                            rel="noreferrer"
-                                                        >
-                                                            <span className="text-sm text-fod-pink font-semibold tracking-wide uppercase">{step.id}</span>
-                                                            <span className="text-sm font-medium text-white mt-1">{step.name}</span>
-                                                        </a>
-                                                    ) : (
-                                                        <a
-                                                            href={step.href}
-                                                            className="group pl-4 py-2 flex flex-col border-l-4 border-gray-200 hover:border-gray-300 md:pl-0 md:pt-4 md:pb-0 md:border-l-0 md:border-t-4"
-                                                        >
-                                                            <span className="text-sm text-gray-400 font-semibold tracking-wide uppercase group-hover:text-gray-300">
-                                                                {step.id}
-                                                            </span>
-                                                            <span className="text-sm font-medium text-gray-400 mt-1">{step.name}</span>
-                                                        </a>
-                                                    )}
-                                                </li>
-                                            ))}
-                                        </ol>
                                     </div>
 
                                 </div>
@@ -201,7 +172,7 @@ export default function WhitelistHero() {
 
                                     <div className="px-8 py-10 sm:px-14">
                                         <div className='text-left'>
-                                            <h2 className="text-xl tracking-wider text-white">Join our <span className="text-fod-yellow">pre-sale raffle</span></h2>
+                                            <h2 className="text-xl tracking-wider text-white">Join our <span className="text-fod-yellow">pre-sale</span></h2>
                                         </div>
 
                                         <div className="mt-6">
@@ -263,8 +234,9 @@ export default function WhitelistHero() {
                                                             onClick={(e) => onSubmit(e)}
                                                             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold text-white bg-fod-button-blue hover:fod-button-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fod-button-blue"
                                                         >
-                                                            {running ? <img width="20" src="/images/loading.svg" /> : 'Apply now'}
-                                                        </button>) : (<span className="text-sm text-fod-pink">You have successfully applied to the pre-sale raffle -- #ChinCheerio 🍷</span>)}
+                                                            {running ? <img width="20" src="/images/loading.svg" /> : <span>Apply now </span>}
+                                                        </button>) : (<span className="text-sm text-fod-pink">You have successfully applied to our pre-sale -- #ChinCheerio 🍷</span>)}
+                                                    <span className="w-full flex justify-center text-xs text-gray-100 mt-4">{count} / 500 slots</span>
                                                 </div>
                                                 {error ? <>
                                                     <div>
@@ -287,8 +259,8 @@ export default function WhitelistHero() {
 
                         </div>
                     </div>
-                </main>
-            </div>
-        </div>
+                </main >
+            </div >
+        </div >
     )
 }
