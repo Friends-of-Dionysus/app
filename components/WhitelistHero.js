@@ -234,7 +234,7 @@ export default function WhitelistHero() {
                                                             onClick={(e) => onSubmit(e)}
                                                             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold text-white bg-fod-button-blue hover:fod-button-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fod-button-blue"
                                                         >
-                                                            {running ? <img width="20" src="/images/loading.svg" /> : <span>Apply now </span>}
+                                                            {running ? <img width="20" src="/images/loading.svg" /> : <span>Join now </span>}
                                                         </button>) : (<span className="text-sm text-fod-pink">You have successfully applied to our pre-sale -- #ChinCheerio 🍷</span>)}
                                                     <span className="w-full flex justify-center text-xs text-gray-100 mt-4">{count} / 500 slots</span>
                                                 </div>
