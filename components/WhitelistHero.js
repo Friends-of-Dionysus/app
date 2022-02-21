@@ -236,7 +236,6 @@ export default function WhitelistHero() {
                                                         >
                                                             {running ? <img width="20" src="/images/loading.svg" /> : <span>Join now </span>}
                                                         </button>) : (<span className="text-sm text-fod-pink">You have successfully applied to our pre-sale -- #ChinCheerio 🍷</span>)}
-                                                    <span className="w-full flex justify-center text-xs text-gray-100 mt-4">{count} / 500 slots</span>
                                                 </div>
                                                 {error ? <>
                                                     <div>
