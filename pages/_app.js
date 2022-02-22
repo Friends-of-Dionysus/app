@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
             <meta property="og:title" content="Friends Of Dionysus" />
-            <meta property="og:site_name" content="The NFT-funded winery" />
+            <meta property="og:site_name" content="The NFT winery" />
             <meta property="og:url" content="https://get.friendsofdionysus.com" />
             <meta
               property="og:description"
